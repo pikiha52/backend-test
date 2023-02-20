@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "e14195ce-b44e-4417-b4f7-626e2c332951",
+		"name": "backend test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"fikih alan\",\n    \"address\": \"Depok\",\n    \"email\": \"fixihcode@dev.co\",\n    \"password\": \"password\",\n    \"photos\": \"test\",\n    \"creditcard_type\": \"CC\",\n    \"creditcard_number\": \"009299212\",\n    \"creditcard_name\": \"BCA\",\n    \"creditcard_expired\": \"05\",\n    \"creditcard_cvv\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/template_express/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"template_express",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/template_express/user/list?q=fixih&ob=email&sb=asc&of=10&lt=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"template_express",
+						"user",
+						"list"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "fixih"
+						},
+						{
+							"key": "ob",
+							"value": "email",
+							"description": "name or email"
+						},
+						{
+							"key": "sb",
+							"value": "asc"
+						},
+						{
+							"key": "of",
+							"value": "10"
+						},
+						{
+							"key": "lt",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/template_express/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"template_express",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "HiJhvL$T27@1u^%u86g",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "fikih alan",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Depok",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fixihcode@dev.co",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "photos",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "creditcard_type",
+							"value": "CC",
+							"type": "text"
+						},
+						{
+							"key": "creditcard_number",
+							"value": "009299212",
+							"type": "text"
+						},
+						{
+							"key": "creditcard_name",
+							"value": "BCA",
+							"type": "text"
+						},
+						{
+							"key": "creditcard_expired",
+							"value": "05",
+							"type": "text"
+						},
+						{
+							"key": "creditcard_cvv",
+							"value": "1234",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/template_express/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"template_express",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

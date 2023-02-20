@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id                 Int    @id @default(autoincrement())
+  name               String @db.VarChar(55)
+  address            String @db.VarChar(225)
+  email              String @db.VarChar(55)
+  password           String @db.VarChar(55)
+  photos             String @db.Text
+  creditcard_type    String @db.VarChar(55)
+  creditcard_number  String @db.VarChar(55)
+  creditcard_name    String @db.VarChar(55)
+  creditcard_expired String @db.VarChar(55)
+  creditcard_cvv     String @db.VarChar(55)
+}
